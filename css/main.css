@@ -1,0 +1,160 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+:root {
+  --first-color: rgb(197, 229, 240);
+  --second-color: #55b1b4;
+  --third-color: white;
+  --fourth-color: #f8b34e;
+}
+
+body {
+  font-family: "Nunito", sans-serif !important;
+  background-color: var(--first-color);
+}
+.container {
+  width: 100%;
+  height: fit-content;
+}
+.header {
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.5rem;
+  position: relative;
+  color: #222a4e;
+  letter-spacing: 0.5px;
+  max-width: 400px;
+  margin: auto;
+}
+.parent {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 350px);
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  width: 100%;
+  gap: 32px;
+}
+.one {
+  background-color: white;
+  max-width: 400px;
+  box-shadow: 0 10px 10px -5px;
+  border-radius: 3%;
+}
+.two {
+  background-color: white;
+  max-width: 400px;
+  box-shadow: 0 10px 10px -5px;
+  border-radius: 3%;
+}
+.three {
+  background-color: white;
+  max-width: 400px;
+  box-shadow: 0 10px 10px -5px;
+  border-radius: 3%;
+}
+img {
+  width: 350px;
+  height: 350px;
+  border-radius: 3%;
+}
+.bold {
+  font-weight: bold;
+  height: 80px;
+}
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+a {
+  color: var(--fourth-color);
+  padding-right: 20px;
+  font-size: 1.2rem;
+}
+.date {
+  color: var(--second-color);
+  font-weight: bold;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 1.2rem;
+}
+.bold,
+.para,
+i {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.para {
+  margin-top: -30px;
+}
+
+a:focus {
+  color: blue;
+}
+.header::after {
+  content: "";
+  position: absolute;
+  background-color: var(--second-color);
+  height: 3px;
+  width: 0;
+  bottom: -5px;
+  left: 35%;
+  transition: 0.3s;
+}
+.header:hover::after {
+  width: 30%;
+}
+i {
+  color: green;
+}
+i:hover {
+  color: rgba(7, 7, 7, 0.267);
+}
+@media only screen and (max-width: 400px) {
+  .parent {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 250px);
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    width: 100%;
+    gap: 20px;
+  }
+  img {
+    width: 250px;
+    height: 250px;
+  }
+}
+@media only screen and (min-width: 700px) {
+  .parent {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 300px);
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    width: 100%;
+    gap: 20px;
+  }
+  img {
+    width: 300px;
+    height: 200px;
+  }
+}
+@media only screen and (min-width: 1340px) {
+  .parent {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 400px);
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    width: 100%;
+    gap: 32px;
+  }
+  img {
+    width: 400px;
+    height: 400px;
+  }
+}
